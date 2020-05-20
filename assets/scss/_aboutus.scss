@@ -1,0 +1,61 @@
+.main-title{
+  text-align: center;
+  background-color: #FF9087;
+  padding: 20px;
+  h1{
+    padding-top: 30px;
+    letter-spacing: 5px;
+    font-size: 5rem;
+    @media #{$small_mobile, $xs_mobile, $sm_mobile}{
+      text-align: center;
+      font-size: 3.5rem;
+    }
+  }
+}
+.introduce-area{
+  h5{
+    color: $primary-color;
+     
+  }
+}
+.about-showcase{
+  .showcase-img{
+    padding: 0;
+    @media #{$large_mobile}{
+      padding: 30px;
+    }
+    @media #{$small_mobile, $xs_mobile, $sm_mobile}{
+      padding: 15px;
+    }
+  }
+  .showcase-info{
+     padding: 0;
+    p{
+      letter-spacing: 1px;
+    }
+    
+    @media #{$small_mobile, $xs_mobile, $sm_mobile}{
+      padding: 15px;
+    }
+  }
+}
+.our-clients-section{
+  position: relative;
+  .title-color{
+    position: absolute;
+    top: 45px;
+    left: 32%;
+    height: 20px;
+    width: 120px;
+    background-color: #E8E6E6;
+    z-index: -1;
+    @media #{$small_mobile, $xs_mobile, $sm_mobile}{
+      left: 15px;
+    }
+  }
+  .clients-name{
+    @media #{$small_mobile, $xs_mobile, $sm_mobile, $large_mobile}{
+      padding-top: 50px;
+    }
+  }
+}

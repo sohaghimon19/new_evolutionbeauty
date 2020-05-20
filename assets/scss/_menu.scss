@@ -1,0 +1,128 @@
+header {
+  font-family: $navbar-font;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0 100px;
+  background: $offwhite;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 1;
+  @media #{$tab} {
+    padding: 0 20px;
+  }
+  @media #{$xs_mobile} {
+    padding: 0px 0px;
+  }
+  .main-logo {
+    float: left;
+    padding: 30px;
+    img {
+      width: 200px;
+      height: auto;
+    }
+  }
+  nav {
+    float: right;
+
+    ul {
+      padding: 0;
+      margin: 0;
+      display: flex;
+      li {
+        list-style: none;
+        a {
+          font-family: 'CaviarDreams';
+          font-weight: 900;
+          height: 100px;
+          line-height: 100px;
+          margin: 0 20px;
+          padding-top: 15px;
+          text-decoration: none;
+          color: $primary-color;
+          &:hover {
+            color: $primary-color;
+            text-decoration: none;
+            border-top: 4px solid $primary-color;
+            @media #{$tab} {
+              border-top: none;
+            }
+          }
+          @media #{$tab} {
+            height: 60px;
+            line-height: 60px;
+            border-top: none;
+            padding-top: 10px;
+            border-bottom: 1px solid $primary-color;
+          }
+        }
+        .active {
+          color: $primary-color;
+          text-decoration: none;
+          border-top: 4px solid $primary-color;
+          @media #{$tab} {
+            border-top: none;
+          }
+        }
+      }
+      @media #{$tab} {
+        display: block;
+        text-align: center;
+      }
+    }
+    @media #{$tab} {
+      // display: none;
+      position: absolute;
+      background-color: $offwhite;
+      width: 100%;
+      height: 100vh;
+      top: 90px;
+      right: -100%;
+      transition: 0.5s;
+      &.active {
+        right: 0;
+      }
+    }
+  }
+
+  .menu-btn {
+    position: absolute;
+    z-index: 3;
+    right: 35px;
+    top: 35px;
+    cursor: pointer;
+    display: none;
+    @include easeOut;
+    .btn-line {
+      width: 30px;
+      height: 4px;
+      margin: 0 0 5px 0;
+      background: $primary-color;
+      @include easeOut;
+    }
+    @media #{$tab} {
+      display: block;
+    }
+    // Rotate Into X With Menu Lines
+    &.active {
+      transform: rotate(180deg);
+
+      .btn-line {
+        // Line 1 - Rotate
+        &:nth-child(1) {
+          transform: rotate(50deg) translate(5px, 5px);
+        }
+
+        // Line 2 - Hide
+        &:nth-child(2) {
+          opacity: 0;
+        }
+
+        // Line 3 - Rotate
+        &:nth-child(3) {
+          transform: rotate(-50deg) translate(7px, -8px);
+        }
+      }
+    }
+  }
+}

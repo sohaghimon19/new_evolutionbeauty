@@ -1,0 +1,140 @@
+.kim-carousel{
+  .carousel-indicators{
+    bottom: 15%;
+    @media #{$tab}{
+      display: none;
+    }
+  }
+  .carousel-item{
+    @media #{$tab_device, $small_mobile, $large_mobile}{
+      height: 300px;
+     }
+     @media #{$xs_mobile, $sm_mobile}{
+      height: 200px;
+     }
+  
+  .carousel-caption{
+    bottom: 25%;
+    @media #{$tab}{
+      display: none;
+    }
+    h1{
+      font-size: 5rem;
+      @media #{$tab_device, $large_mobile, $small_mobile, $xs_mobile, $sm_mobile}{
+       font-size: 2rem;
+      }
+    }
+  }
+ }
+}
+
+.workflow-items{
+  width: 98%;
+  margin: 0 auto;
+  @media #{$small_mobile}{
+    width: 95%;
+  }
+  h2{
+    margin: 2em 0;
+  }
+  img{
+    width: 100%;
+  }
+  .grid{
+    display: flex;
+    .grid-col{
+      flex: 1;
+      margin: 0 .1em;
+    }
+    
+  }
+  
+  .grid-col--2, .grid-col--3{
+    display: none;
+  }
+  .grid-col--2, .grid-col--3{
+    @media #{$tab_device, $medium_device, $big_screen, $extra_big_screen}{
+      display: block;
+    }
+  }
+  
+
+  .content{
+    position: absolute;
+    background: rgba(0, 0, 0, .8);
+    color: $white;
+    margin-top: 1em;
+    opacity: 0;
+    transform: translateX(-.5em);
+    transition: all 2s;
+    will-change: opacity, transform;
+    h2{
+      margin: .2em .5em;
+      font-size: 1em;
+    }
+  }
+  .grid-item:hover{
+    cursor: pointer;
+    .content{
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}
+.portfolio-controller{
+  .menu-btn{
+    position: absolute;
+    z-index: 3;
+    right: 35px;
+    top: 35px;
+    cursor: pointer;
+    .btn-line {
+      width: 30px;
+      height: 4px;
+      margin: 0 0 5px 0;
+      background: $primary-color;
+      @include easeOut;
+    // Line 1 - Rotate
+    &:nth-child(1) {
+      transform: rotate(50deg) translate(5px, 5px);
+    }
+  
+    // Line 2 - Hide
+    &:nth-child(2) {
+      opacity: 0;
+    }
+  
+    // Line 3 - Rotate
+    &:nth-child(3) {
+      transform: rotate(-50deg) translate(8px, -8px);
+    }
+  }
+  }
+  
+}
+.img-showcase{
+  position: relative;
+  margin-bottom: 25px;
+  img{
+    width: 60%;
+  }
+  .left-arrow{
+    position: absolute;
+    top: 45%;
+    right: 90%;
+    img{
+      width: 20px;
+      height: auto;
+    }
+  }
+  .right-arrow{
+    position: absolute;
+    top: 45%;
+    left: 90%;
+    img{
+      width: 20px;
+      height: auto;
+    }
+  }
+}
+ 

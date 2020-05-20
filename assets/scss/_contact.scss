@@ -1,0 +1,18 @@
+.form-contact{
+  input, textarea{
+    border: none;
+    border-bottom: 1px solid $primary-color;
+    &:focus{
+      outline: 0;
+      box-shadow: none;
+      border-bottom: 1px solid #FF9087;
+    }
+  }
+  #submit{
+    background: $white;
+    border-bottom: none;
+    &:hover{
+      background: $offwhite;
+    }
+  }
+}

@@ -1,0 +1,44 @@
+.main-title-services{
+  text-align: center;
+  background-color: #7CE7CA;
+  padding: 20px;
+  h1{
+    padding-top: 30px;
+    letter-spacing: 5px;
+    font-size: 5rem;
+    @media #{$small_mobile, $xs_mobile, $sm_mobile}{
+      text-align: center;
+      font-size: 3.5rem;
+    }
+  }
+}
+
+.services-task{
+  
+  .services-items{
+    position: relative;
+    .title-color{
+      position: absolute;
+      top: 20px;
+      left: 0;
+      height: 20px;
+      width: 120px;
+      background-color: #E8E6E6;
+      z-index: -1;
+      @media #{$small_mobile, $xs_mobile, $sm_mobile}{
+        left: 15px;
+      }
+    }
+    padding: 25px;
+    @media #{$small_mobile, $xs_mobile, $sm_mobile}{
+      padding: 30px;
+    }
+
+    h5{
+      font-weight: 600;
+    }
+    p{
+      font-weight: 400;
+    }
+  }
+}
